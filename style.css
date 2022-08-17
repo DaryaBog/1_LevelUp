@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*.before,
+*.after {
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    font-family: "Dosis", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    line-height: 30px;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+/* ------------------------------- */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container {
+    width: 100%;
+    max-width: 425px;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+
+    font-family: "Dosis", sans-serif;
+    font-family: "Josefin Slab", serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Playfair Display", serif;
+    font-family: "Poiret One", cursive;
+}
+
+.content {
+    min-height: 400px;
+    padding: 20px 0;
+}
+
+/* ----------Промо---------- */
+
+.promo_1 {
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+.title {
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    font-weight: 700;
+}
+.promo_1__photo {
+    width: 50%;
+    padding: 10px;
+}
+.promo_1__about {
+    font-size: 18px;
+    letter-spacing: 6px;
+    padding: 10px;
+}
+.promo_1__list li {
+    padding: 0 0 20px 30px;
+    background: url("img/icon.png") 0 5px no-repeat;
+}
+
+.promo_1__buy {
+    min-width: 200px;
+    background: rgb(27, 128, 1);
+    color: #fff;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    letter-spacing: 0.5rem;
+}
+
+.promo_1__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ----------Кнопка---------- */
+
+.buy {
+    width: 200px;
+    background: rgb(27, 128, 1);
+    color: #fff;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    letter-spacing: 0.5rem;
+}
+
+/* ----------Состаав---------- */
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+}
+.ingredients__column_1 {
+    max-width: 100%;
+}
+.ingridients__card {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+}
+.card {
+    display: flex;
+}
+.ingredients__column_1 img,
+.ingredients__column_3 img {
+    border-radius: 50%;
+}
+.card__photo {
+    margin: 10px;
+    margin-left: 0px;
+    min-width: 135px;
+    min-height: 135px;
+    max-width: 135px;
+    max-height: 135px;
+}
+.card__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.ingredients__column_2 {
+    background: #a1a1a1;
+    padding: 20px 30px;
+}
+.ingredients__column_2 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px;
+}
+.card__prod-photo {
+    max-width: 100px;
+}
+
+.ingredient__buy {
+}
+.ingredients__column_3 {
+    max-width: 100%;
+}
+
+/* ----------Отзывы---------- */
+
+.reviews {
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 530px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.reviews__carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 6;
+    width: 100vw;
+    height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+}
+.reviews__buyer_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.reviews__buyer_2 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.reviews__buyer_3 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+.buyer {
+    position: absolute;
+    width: 90%;
+    height: 520px;
+    background-color: coral;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 520px;
+    min-width: 100%; */
+}
+
+div.buyer:nth-of-type(1) {
+    --offset: 1;
+    background-color: #90f1ef;
+}
+div.buyer:nth-of-type(2) {
+    --offset: 2;
+    background-color: #ff70a6;
+}
+div.buyer:nth-of-type(3) {
+    --offset: 3;
+    background-color: #ff9770;
+}
+
+input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ .reviews .reviews__carousel {
+    --position: 1;
+}
+
+input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ .reviews .reviews__carousel {
+    --position: 2;
+}
+
+input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ .reviews .reviews__carousel {
+    --position: 3;
+}
+
+.buyer__photo {
+    background: #a1a1a1;
+    margin: 15px 15px 0;
+    min-width: 90%;
+    height: 50%;
+}
+.buyer__name {
+    margin: 15px 15px 0;
+    font-weight: 600;
+}
+.buyer__text {
+    margin: 15px 15px 0;
+}
+
+/* ----------Промо---------- */
+
+.promo_2 {
+    display: flex;
+    flex-direction: column;
+}
+.promo_2__photo {
+}
+.promo_2__text {
+}
+.promo_2__characteristic {
+}
+.promo_2__buy {
+}
+
+/* ----------Форма заказа---------- */
+
+.order {
+}
+.order__title {
+}
+.order__sale {
+}
+.order__timer {
+}
+.order__cost_1 {
+}
+.order__cost_2 {
+}
+.order__form {
+}
+.order__buy {
+}
+.order__photo {
+}

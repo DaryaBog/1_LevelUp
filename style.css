@@ -82,11 +82,10 @@ img {
 }
 .container {
     width: 100%;
-    max-width: 425px;
     display: flex;
     flex-direction: column;
     letter-spacing: 2px;
-
+    margin: 0 auto;
     font-family: "Dosis", sans-serif;
     font-family: "Josefin Slab", serif;
     font-family: "Open Sans", sans-serif;
@@ -169,14 +168,22 @@ img {
 .ingredients {
     display: flex;
     flex-direction: column;
+
+    background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+        radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px), #8a3;
+    background-size: 20px 20px;
 }
 .ingredients__column_1 {
     max-width: 100%;
 }
 .ingridients__card {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 3%;
     padding: 10px;
     height: 100%;
-    width: 100%;
 }
 .card {
     display: flex;
@@ -198,9 +205,10 @@ img {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    max-width: 100%;
 }
 .ingredients__column_2 {
-    background: #a1a1a1;
+    background: #00000098;
     padding: 20px 30px;
 }
 .ingredients__column_2 .card {
@@ -223,34 +231,48 @@ img {
 /* ----------Отзывы---------- */
 
 .reviews {
+    position: relative;
     height: 600px;
     margin: 0;
-    display: grid;
-    grid-template-rows: 530px 100px;
-    grid-template-columns: 1fr 30px 30px 30px 1fr;
-    align-items: center;
-    justify-items: center;
-}
-.reviews__carousel {
-    grid-row: 1 / 2;
-    grid-column: 1 / 6;
-    width: 100vw;
-    height: 530px;
+    min-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 600px;
-    --items: 5;
-    --middle: 3;
-    --position: 1;
-    pointer-events: none;
+
+    background: rgb(254, 252, 234);
+    background: -moz-linear-gradient(-45deg, rgba(254, 252, 234, 1) 0%, rgba(255, 255, 58, 1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(254, 252, 234, 1) 0%, rgba(255, 255, 58, 1) 100%);
+    background: linear-gradient(135deg, rgba(254, 252, 234, 1) 0%, rgba(255, 255, 58, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#ffff3a',GradientType=1 );
 }
-.reviews__buyer_1 {
+
+.arrow_right,
+.arrow_left {
+    height: 100%;
+    width: 10%;
+    background: rgba(0, 0, 0, 0.3);
+}
+.arrow_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.arrow_left {
     position: absolute;
     top: 0;
     left: 0;
+}
+.reviews__carousel {
+    position: relative;
+    overflow: hidden;
+    min-width: 80%;
+    min-height: 100%;
+}
+
+.reviews__buyer_1 {
+    position: absolute;
+    top: 0;
+    left: 100%;
 }
 .reviews__buyer_2 {
     position: absolute;
@@ -262,85 +284,61 @@ img {
     top: 0;
     left: 100%;
 }
+.active {
+    left: 0;
+}
 .buyer {
-    position: absolute;
-    width: 90%;
-    height: 520px;
-    background-color: coral;
-    --r: calc(var(--position) - var(--offset));
-    --abs: max(calc(var(--r) * -1), var(--r));
-    transition: all 0.25s linear;
-    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
-    z-index: calc((var(--position) - var(--abs)));
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 520px;
-    min-width: 100%; */
-}
-
-div.buyer:nth-of-type(1) {
-    --offset: 1;
-    background-color: #90f1ef;
-}
-div.buyer:nth-of-type(2) {
-    --offset: 2;
-    background-color: #ff70a6;
-}
-div.buyer:nth-of-type(3) {
-    --offset: 3;
-    background-color: #ff9770;
-}
-
-input:nth-of-type(1) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(1):checked ~ .reviews .reviews__carousel {
-    --position: 1;
-}
-
-input:nth-of-type(2) {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(2):checked ~ .reviews .reviews__carousel {
-    --position: 2;
-}
-
-input:nth-of-type(3) {
-    grid-column: 4 /5;
-    grid-row: 2 / 3;
-}
-input:nth-of-type(3):checked ~ .reviews .reviews__carousel {
-    --position: 3;
+    min-width: 100%;
 }
 
 .buyer__photo {
     background: #a1a1a1;
-    margin: 15px 15px 0;
+    margin: 15px 10% 0;
     min-width: 90%;
     height: 50%;
 }
 .buyer__name {
-    margin: 15px 15px 0;
+    margin: 15px 10% 0;
     font-weight: 600;
 }
 .buyer__text {
-    margin: 15px 15px 0;
+    margin: 15px 10% 0;
 }
 
 /* ----------Промо---------- */
 
 .promo_2 {
+    background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+        radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px), #8a3;
+    background-size: 20px 20px;
+
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 .promo_2__photo {
+    margin: 10px;
 }
-.promo_2__text {
-}
+
+.promo_2__text,
 .promo_2__characteristic {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
 }
 .promo_2__buy {
 }
@@ -348,20 +346,106 @@ input:nth-of-type(3):checked ~ .reviews .reviews__carousel {
 /* ----------Форма заказа---------- */
 
 .order {
+    background-image: radial-gradient(
+            closest-side,
+            transparent 0%,
+            transparent 75%,
+            #b6cc66 76%,
+            #b6cc66 85%,
+            #edffdb 86%,
+            #edffdb 94%,
+            #ffffff 95%,
+            #ffffff 103%,
+            #d9e6a7 104%,
+            #d9e6a7 112%,
+            #798b3c 113%,
+            #798b3c 121%,
+            #ffffff 122%,
+            #ffffff 130%,
+            #e0ead7 131%,
+            #e0ead7 140%
+        ),
+        radial-gradient(
+            closest-side,
+            transparent 0%,
+            transparent 75%,
+            #b6cc66 76%,
+            #b6cc66 85%,
+            #edffdb 86%,
+            #edffdb 94%,
+            #ffffff 95%,
+            #ffffff 103%,
+            #d9e6a7 104%,
+            #d9e6a7 112%,
+            #798b3c 113%,
+            #798b3c 121%,
+            #ffffff 122%,
+            #ffffff 130%,
+            #e0ead7 131%,
+            #e0ead7 140%
+        );
+    background-size: 110px 110px;
+    background-color: #c8d3a7;
+    background-position: 0 0, 55px 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
 }
 .order__title {
+    color: #fff;
+    background: rgba(102, 17, 51, 0.752);
+    font-size: 40px;
+    font-weight: 900;
+    padding: 15px;
 }
 .order__sale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    margin: 20px 0;
 }
 .order__timer {
+    margin: 10px;
+    font-size: 30px;
 }
 .order__cost_1 {
+    margin: 10px;
+    font-size: 30px;
 }
 .order__cost_2 {
+    margin: 10px;
+    font-size: 15px;
+    text-decoration: line-through;
 }
 .order__form {
+    background: #00000083;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.order__buy {
+
+.order__name,
+.order__phone {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0 0;
+    width: 200px;
+}
+button.order__buy {
 }
 .order__photo {
+    max-width: 30%;
+    padding: 10px;
+}
+
+@media (min-width: 426px) {
+}
+
+@media (min-width: 769px) {
 }

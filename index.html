@@ -13,6 +13,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>LevelUp</title>
 </head>
 
@@ -104,9 +105,10 @@
             </div>
         </article>
         <article class="reviews content">
-
-            <div class="reviews__carousel">
-                <div class="reviews__buyer_1 buyer">
+            <div class="arrow_right"></div>
+            <div class="arrow_left"></div>
+            <div id="carousel" class="reviews__carousel">
+                <div class="reviews__buyer_1 buyer active">
                     <div class="buyer__photo"><img src="img/reviewer/rev1.jpg" alt="Oleg"></div>
                     <div class="buyer__name">Oleg</div>
                     <div class="buyer__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque distinctio
@@ -127,20 +129,23 @@
                 </div>
             </div>
 
-            <input type="radio" name="position" checked />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
 
         </article>
         <article class="promo_2 content">
-            <div class="promo_2__photo"><img src="img/doctor.png" alt="doctor"></div>
-            <div class="promo_2__text">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, asperiores. Voluptatibus aliquam ullam
-                    totam dolore, temporibus rem explicabo repudiandae porro deserunt ipsa voluptatum quod vel accusamus
-                    nam expedita suscipit eveniet?</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel ullam cupiditate ipsa. Numquam, ex ab.
-                </p>
+            <div class="promo_2 wrapper">
+                <div class="promo_2__photo"><img src="img/doctor.png" alt="doctor"></div>
+                <div class="promo_2__text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, asperiores. Voluptatibus aliquam
+                        ullam
+                        totam dolore, temporibus rem explicabo repudiandae porro deserunt ipsa voluptatum quod vel
+                        accusamus
+                        nam expedita suscipit eveniet?</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel ullam cupiditate ipsa. Numquam, ex
+                        ab.
+                    </p>
+                </div>
             </div>
+
             <div class="promo_2__characteristic">
                 <ul>
                     <li>Lorem, ipsum dolor.</li>
@@ -154,15 +159,21 @@
             <h2 class="order__title">LevelUp</h2>
             <div class="order__sale">
                 <div class="order__timer">30 минут</div>
-                <div class="order__cost_1">2000</div>
-                <div class="order__cost_2">1999</div>
+                <div class="order__cost">
+                    <div class="order__cost_1">2000</div>
+                    <div class="order__cost_2">1999</div>
+                </div>
             </div>
+            <div class="order__photo">
+                <img src="img/prod.png" alt="prod">
+            </div>
+
             <form action="#" class="order__form">
-                <input type="text">
-                <input type="phone">
-                <button class="order__buy buy">Заказать</button>
+                <input class="order__name" placeholder="ФИО" type="text">
+                <input class="order__phone" placeholder="телефон" type="phone">
+                <button class="buy order__buy ">Заказать</button>
             </form>
-            <div class="order__photo"><img src="img/prod.png" alt="prod"></div>
+
         </article>
     </main>
 </body>

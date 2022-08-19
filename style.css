@@ -250,9 +250,6 @@ img {
     max-width: 100px;
 }
 
-.ingredient__buy {
-}
-
 /* ----------Отзывы---------- */
 
 .reviews {
@@ -496,8 +493,6 @@ label.label_active {
     color: #fff;
 }
 
-button.order__buy {
-}
 .order__photo {
     max-width: 30%;
     padding: 10px;

@@ -23,21 +23,19 @@
             <h1 class="title">
                 LevelUp
             </h1>
-            <div class="promo_1__photo"><img src="img/prod.png" alt="prod"></div>
-            <div class="promo_1__about">
-                <ul class="promo_1__list">
-                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi sed, ullam eveniet fuga iste,
-                        necessitatibus ducimus totam quaerat officia rem laboriosam aperiam accusantium accusamus ipsam
-                        cum magnam soluta inventore minima!
-                        Error architecto modi magni repudiandae, nobis veniam quia officia consequuntur ab eveniet,
-                        fugit facilis itaque. </li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facere mollitia deleniti
-                        recusandae earum maxime porro tempora dolorem consequuntur, ab atque nam dolore rem incidunt hic
-                        odio obcaecati provident itaque.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                </ul>
+            <div class="wrapper_2">
+                <div class="promo_1__photo"><img src="img/prod.png" alt="prod"></div>
+                <div class="promo_1__about">
+                    <ul class="promo_1__list">
+                        <li>Lorem ipsum dolor </li>
+                        <li>Lorem ipsum dolor </li>
+                        <li>Lorem ipsum </li>
+                    </ul>
+                    <button class="promo_1__buy buy">Заказать</button>
+                </div>
             </div>
-            <button class="promo_1__buy buy">Заказать</button>
+
+
             <video autoplay muted loop preload="auto" class="promo_1__video">
                 <source src="video/500_man_makes_a_like_3.mp4" type="video/mp4">
             </video>
@@ -105,14 +103,16 @@
             </div>
         </article>
         <article class="reviews content">
-            <div class="arrow_right"></div>
-            <div class="arrow_left"></div>
+            <div class="arrow_right"><img src="img/reviewer/right.png" alt=""></div>
+            <div class="arrow_left"><img src="img/reviewer/left.png" alt=""></div>
             <div id="carousel" class="reviews__carousel">
                 <div class="reviews__buyer_1 buyer active">
                     <div class="buyer__photo"><img src="img/reviewer/rev1.jpg" alt="Oleg"></div>
                     <div class="buyer__name">Oleg</div>
-                    <div class="buyer__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque distinctio
-                        facere numquam optio minus reprehenderit veritatis at neque repellat consequatur.</div>
+                    <div class="buyer__text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque distinctio
+                            facere numquam optio minus reprehenderit veritatis at neque repellat consequatur.</p>
+                    </div>
                 </div>
                 <div class="reviews__buyer_2 buyer">
                     <div class="buyer__photo"><img src="img/reviewer/rev3.jpg" alt="Elena"></div>
@@ -132,7 +132,7 @@
 
         </article>
         <article class="promo_2 content">
-            <div class="promo_2 wrapper">
+            <div class="wrapper">
                 <div class="promo_2__photo"><img src="img/doctor.png" alt="doctor"></div>
                 <div class="promo_2__text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, asperiores. Voluptatibus aliquam
@@ -147,7 +147,7 @@
             </div>
 
             <div class="promo_2__characteristic">
-                <ul>
+                <ul class="promo_2__items">
                     <li>Lorem, ipsum dolor.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem, ipsum.</li>
@@ -158,21 +158,34 @@
         <article class="order content">
             <h2 class="order__title">LevelUp</h2>
             <div class="order__sale">
-                <div class="order__timer">30 минут</div>
+                <ul class="order__timer">
+                    <li class="order__min"></li>
+                    <li class="order__sec"></li>
+                </ul>
                 <div class="order__cost">
-                    <div class="order__cost_1">2000</div>
-                    <div class="order__cost_2">1999</div>
+                    <div class="order__cost_1">2000$</div>
+                    <div class="order__cost_2">1999$</div>
                 </div>
             </div>
-            <div class="order__photo">
-                <img src="img/prod.png" alt="prod">
-            </div>
+            <div class="wrapper_1">
+                <div class="order__photo">
+                    <img src="img/prod.png" alt="prod">
+                </div>
 
-            <form action="#" class="order__form">
-                <input class="order__name" placeholder="ФИО" type="text">
-                <input class="order__phone" placeholder="телефон" type="phone">
-                <button class="buy order__buy ">Заказать</button>
-            </form>
+                <form action="#" class="order__form">
+                    <div class="form__row">
+                        <label for="name" class="order__span_1">Иванов Иван Иванович</label>
+                        <input name="name" class="order__name" type="text" required>
+                    </div>
+                    <div class="form__row">
+                        <label for="phone" class="order__span_2">89887654321</label>
+                        <input name="phone" class="order__phone" type="phone" required>
+                    </div>
+
+                    <button class="buy order__buy" disabled>Заказать</button>
+                </form>
+
+            </div>
 
         </article>
     </main>
